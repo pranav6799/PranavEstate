@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser')
 const listingRouter = require('./Routes/listingRoute')
 const path = require('path')
 const cors = require('cors')
+const port = process.env.PORT || 3001
 connectDb()
 
 app.use(cors());;
@@ -20,7 +21,7 @@ app.get('*',(req,resp)=>{
     resp.sendFile(path.join(__dirname,'../client/dist/index.html'))
 })
 
-app.listen(8080,()=>{
+app.listen(port,()=>{
     console.log('server running on port 8080')
 })
 
