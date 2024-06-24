@@ -9,7 +9,12 @@ const path = require('path')
 
 connectDb()
 
+const corsOptions = {
+  origin: ['http://localhost:5173', 'https://pranavestate.onrender.com'],
+  optionsSuccessStatus: 200
+};
 
+app.use(cors(corsOptions));
 app.use(express.json())
 app.use(cookieParser())
 app.use('/api/user',userRouter)
