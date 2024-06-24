@@ -9,12 +9,7 @@ const path = require('path')
 const cors = require('cors')
 connectDb()
 
-const corsOptions = {
-    origin: ['http://localhost:8080'],
-    credentials: true,
-};
-
-app.use(cors(corsOptions));;
+app.use(cors());;
 app.use(express.json())
 app.use(cookieParser())
 app.use('/api/user',userRouter)
