@@ -9,7 +9,7 @@ const listingRouter = require('./Routes/listingRoute')
 const path = require('path')
 
 connectDb()
-const __dirname = path.resolve()
+
 
 app.use(cors({
     origin: 'http://localhost:5173',
