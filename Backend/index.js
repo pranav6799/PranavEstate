@@ -6,7 +6,7 @@ const userRouter = require('./Routes/userRouter')
 const cookieParser = require('cookie-parser')
 const listingRouter = require('./Routes/listingRoute')
 const path = require('path')
-const cors = require('cors)
+const cors = require('cors')
 connectDb()
 
 const corsOptions = {
