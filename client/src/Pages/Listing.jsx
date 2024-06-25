@@ -36,7 +36,7 @@ console.log(listing)
 useEffect(()=>{
     setLoading(true)
     const fetchData = async()=>{
-        const {data} = await axios.get(`http://localhost:8080/api/listing/getList/${id}`,{
+        const {data} = await axios.get(`/api/listing/getList/${id}`,{
             withCredentials:true
         })
     if(data.status === false){
