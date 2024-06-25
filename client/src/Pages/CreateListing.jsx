@@ -127,7 +127,7 @@ const handleOnSubmit = async(e)=>{
         if(formData.imageUrls.length < 1) return setError('You must atleast Upload one image')
         setLoding(true)
         setError(false)
-        const {data} = await axios.post('http://localhost:8080/api/listing/createListing',formData,{
+        const {data} = await axios.post('/api/listing/createListing',formData,{
             withCredentials:true
         })
         setLoding(false)
