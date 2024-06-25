@@ -53,7 +53,7 @@ const Search = () => {
         const fetchListings = async()=>{
             setLoading(true)
             const searchQuery = urlParams.toString()
-            const {data} = await axios.get(`http://localhost:8080/api/listing/getAllListings?${searchQuery}`,{
+            const {data} = await axios.get(`/api/listing/getAllListings?${searchQuery}`,{
               withCredentials: true
             })
             if(data.length > 8){
