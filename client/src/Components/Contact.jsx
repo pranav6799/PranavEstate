@@ -13,7 +13,7 @@ setMessage(e.target.value)
 
 useEffect(()=>{
   const fetchUser = async()=>{
-  const {data} = await axios.get(`http://localhost:8080/api/user/getUser/${listing.user}`,{
+  const {data} = await axios.get(`/api/user/getUser/${listing.user}`,{
     withCredentials:true
   })
   setLandLord(data.user)
