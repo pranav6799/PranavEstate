@@ -21,7 +21,7 @@ const handleOnSubmit = async(e)=>{
   e.preventDefault()
 try {
   setLoading(true)
-  const {data} = await axios.post('http://localhost:8080/api/user/signUp',formData)
+  const {data} = await axios.post('/api/user/signUp',formData)
 
   if(data.status === false){
     setLoading(false),
