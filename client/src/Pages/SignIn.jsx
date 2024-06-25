@@ -25,7 +25,7 @@ const handleOnSubmit = async(e)=>{
   e.preventDefault()
   try{
 dispatch(signInStart())
-  const {data}= await axios.post('http://localhost:8080/api/user/login',formData)
+  const {data}= await axios.post('/api/user/login',formData)
   console.log(data)
   dispatch(signInSuccess(data.user))
   setFormData({})
