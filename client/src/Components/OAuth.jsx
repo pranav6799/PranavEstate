@@ -19,7 +19,7 @@ const OAuth = () => {
       const { displayName, photoURL, email } = result.user;
 
       const {data} = await axios.post(
-        "http://localhost:8080/api/user/google",
+        "/api/user/google",
         {
           name: displayName,
           avatar: photoURL,
