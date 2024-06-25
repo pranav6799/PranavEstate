@@ -48,7 +48,7 @@
       e.preventDefault()
       try {
         dispatch(updateStart())
-        const {data}= await axios.post(`http://localhost:8080/api/user/update/${currentUser._id}`,formData, {
+        const {data}= await axios.post(`/api/user/update/${currentUser._id}`,formData, {
           withCredentials: true,
         })
         if(status === false){
@@ -66,7 +66,7 @@
     const handleDeleteSubmit = async()=>{
       try {
         dispatch(deleteStarted())
-        const {data}= await axios.delete(`http://localhost:8080/api/user/delete/${currentUser._id}`)
+        const {data}= await axios.delete(`/api/user/delete/${currentUser._id}`)
         dispatch(deleteSuccess(data))
         navigate('/signIn')
       } catch (err) {
@@ -77,7 +77,7 @@
     const handleSignOut = async()=>{
       try {
         dispatch(singOutStarted())
-        const {data}= await axios.post('http://localhost:8080/api/user/signOut')
+        const {data}= await axios.post('/api/user/signOut')
         dispatch(signOutSuccess(data))
       } catch (err) {
         dispatch(signOutFailed(err.data))
