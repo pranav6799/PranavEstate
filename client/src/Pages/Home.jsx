@@ -18,7 +18,7 @@ const Home = () => {
   useEffect(() => {
     const fetchOfferListings = async () => {
       try {
-        const { data } = await axios.get('http://localhost:8080/api/listing/getAllListings?offer=true&limit=4', {
+        const { data } = await axios.get('/api/listing/getAllListings?offer=true&limit=4', {
           withCredentials: true,
         })
         setOfferListings(data)
@@ -29,7 +29,7 @@ const Home = () => {
 
     const fetchRentListings = async () => {
       try {
-        const { data } = await axios.get('http://localhost:8080/api/listing/getAllListings?type=rent&limit=4', {
+        const { data } = await axios.get('/api/listing/getAllListings?type=rent&limit=4', {
           withCredentials: true,
         })
         setRentListings(data)
@@ -40,7 +40,7 @@ const Home = () => {
 
     const fetchSaleListings = async () => {
       try {
-        const { data } = await axios.get('http://localhost:8080/api/listing/getAllListings?type=sell&limit=4', {
+        const { data } = await axios.get('/api/listing/getAllListings?type=sell&limit=4', {
           withCredentials: true,
         })
         setSaleListings(data)
